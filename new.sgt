@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<template SPSS-Version="1.4" date="2016-04-30" description="" selectPath="87 2 3 30 97 98 10 90 92 12 13 17 18 19 29 33 47 36 37 38 43 45 46 " xmlns="http://www.ibm.com/software/analytics/spss/xml/visualization" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.ibm.com/software/analytics/spss/xml/visualization http://www.ibm.com/software/analytics/spss/xml/visualization/vizml-template-3.5.xsd">
+	<setAxisStyle categorical="false" role="x">
+		<axisLabelStyle>
+			<style color="#000000" color2="transparent" font-size="16pt" font-weight="bold" text-fit="false" visible="true"/>
+		</axisLabelStyle>
+		<label>中国进出口单位产品价值差异幅度</label>
+	</setAxisStyle>
+	<setAxisStyle categorical="false" role="y">
+		<axisLabelStyle>
+			<style color="#000000" color2="transparent" font-size="16pt" font-weight="bold" text-fit="false" visible="true"/>
+		</axisLabelStyle>
+		<label>中国进出口差异幅度</label>
+	</setAxisStyle>
+	<setPanelOptions gap="2%" role="y"/>
+	<setWrapPanels wrap="false"/>
+	<addFrame count="1" type="visualization">
+		<location bottom="933px" left="0px" right="1200px" top="0px"/>
+		<style color="#ffffff" color2="transparent" coordinate="0" number="0" visible="true"/>
+		<style coordinate="1" font-family="SansSerif" font-size="8pt" number="1" pattern="0" stroke-linecap="butt" text-fit="true" visible="true"/>
+	</addFrame>
+	<addFrame count="1" type="graph">
+		<location bottom="99%" left="1%" right="75%" top="1%"/>
+		<style color="transparent" color2="transparent" visible="true"/>
+		<style color="#f0f0f0" color2="#000000" coordinate="1" number="1" visible="true"/>
+	</addFrame>
+	<addFrame count="1" type="container">
+		<location bottom="14%" left="75%" right="99%" top="0%"/>
+	</addFrame>
+	<setAxisOpposite categorical="false" opposite="false" role="x"/>
+	<setAxisOpposite categorical="false" opposite="false" role="y"/>
+	<setTranspose transpose="false"/>
+	<setAxisScale method="linear" role="x"/>
+	<setAxisScale method="linear" role="y"/>
+	<setTickLabelFormat categorical="false" derived="false" role="x">
+		<format maximumFractionDigits="3" minimumFractionDigits="3" minimumIntegerDigits="0" useGrouping="false"/>
+	</setTickLabelFormat>
+	<setTickLabelAngle categorical="false" derived="false" role="x"/>
+	<setTickLabelFormat categorical="false" derived="false" role="y">
+		<format maximumFractionDigits="3" minimumFractionDigits="3" minimumIntegerDigits="0" useGrouping="false"/>
+	</setTickLabelFormat>
+	<setTickLabelAngle categorical="false" derived="false" role="y"/>
+	<setAxisMajorTicks>
+		<majorTicks categorical="true" delta="0.2" derived="false" position="outside" role="x">
+			<markStyle>
+				<style color="#000000" stroke-width="1pt" visible="true"/>
+			</markStyle>
+			<tickLabelStyle>
+				<style color="#000000" font-size="8pt" visible="true"/>
+			</tickLabelStyle>
+		</majorTicks>
+	</setAxisMajorTicks>
+	<setAxisMajorTicks>
+		<majorTicks categorical="false" delta="0.2" derived="false" position="outside" role="y">
+			<markStyle>
+				<style color="#000000" stroke-width="1pt" visible="true"/>
+			</markStyle>
+			<tickLabelStyle>
+				<style color="#000000" font-size="8pt" visible="true"/>
+			</tickLabelStyle>
+		</majorTicks>
+	</setAxisMajorTicks>
+	<setAxisMinorTicks>
+		<minorTicks categorical="false" derived="false" number="2" position="outside" role="x">
+			<markStyle>
+				<style color="#000000" visible="false"/>
+			</markStyle>
+		</minorTicks>
+	</setAxisMinorTicks>
+	<setAxisMinorTicks>
+		<minorTicks categorical="false" derived="false" number="2" position="outside" role="y">
+			<markStyle>
+				<style color="#000000" visible="true"/>
+			</markStyle>
+		</minorTicks>
+	</setAxisMinorTicks>
+	<setAxisMargin categorical="false" lowerMargin="5%" role="x" upperMargin="5%"/>
+	<setAxisMargin categorical="false" lowerMargin="5%" role="y" upperMargin="5%"/>
+	<addFrame count="1" type="legend">
+		<style color="transparent" color2="transparent" coordinate="0" number="0" visible="true"/>
+		<style color="#000000" color2="transparent" coordinate="1" font-size="10pt" font-weight="regular" number="1" text-fit="false" visible="true"/>
+		<label><style color="#000000" color2="transparent" coordinate="0" font-size="16pt" font-weight="regular" number="0" text-fit="false" visible="true"/></label>
+	</addFrame>
+	<addReferenceLine styleOnly="true" x="0.0" xcategorical="false">
+		<style visible="true"/>
+	</addReferenceLine>
+	<addReferenceLine styleOnly="true" y="0.0" ycategorical="false">
+		<style visible="true"/>
+	</addReferenceLine>
+	<setShowLineMarkers>
+		<style color="transparent" color2="#000000" size="5pt" symbol="circle" visible="true"/>
+	</setShowLineMarkers>
+	<setStyle subtype="simple" type="scatter">
+		<style color="transparent" color2="#000000" coordinate="0" size="5pt" symbol="circle" visible="true"/>
+	</setStyle>
+	<setStyleCycle id="styleCycleDefault" styleByNumber="1">
+		<cycle>
+			<style color="transparent" color2="#3e58ac" visible="true"/>
+			<style color="transparent" color2="#2eb848" glyph-angle="0.0" glyph-aspect="1.0" glyph-sides="3" size="8px" symbol="polygon" visible="true"/>
+			<style color="transparent" color2="#ef3338" glyph-angle="0.0" glyph-aspect="1.0" glyph-sides="5" size="7px" symbol="square" visible="true"/>
+			<style color="#7c287d" color2="#7c287d" glyph-angle="0.0" glyph-aspect="1.0" glyph-sides="5" size="8px" stroke-width="1.5pt" symbol="cross" visible="true"/>
+			<style color="transparent" color2="#282a73" glyph-angle="0.0" glyph-aspect="1.0" glyph-sides="8" size="10px" symbol="star" visible="true"/>
+			<style color="#a21619" color2="#ef3338" glyph-angle="0.0" glyph-aspect="1.0" glyph-sides="3" size="10px" symbol="flower" visible="true"/>
+			<style color="transparent" color2="#0a562c" glyph-angle="0.0" glyph-aspect="1.0" glyph-sides="5" size="10px" symbol="bowtie" visible="true"/>
+			<style color="transparent" color2="#cccccc" visible="true"/>
+			<style color="transparent" color2="#7aaad5" visible="true"/>
+			<style color="transparent" color2="#0a562c" visible="true"/>
+			<style color="transparent" color2="#f8981d" visible="true"/>
+			<style color="transparent" color2="#ddbaf1" visible="true"/>
+			<style color="transparent" color2="#1a5f76" visible="true"/>
+			<style color="transparent" color2="#ccffcc" visible="true"/>
+			<style color="transparent" color2="#bb3f7f" visible="true"/>
+			<style color="transparent" color2="#999999" visible="true"/>
+			<style color="transparent" color2="#000000" visible="true"/>
+			<style color="transparent" color2="#b6e7e8" visible="true"/>
+			<style color="transparent" color2="#ffffff" visible="true"/>
+			<style color="transparent" color2="#797aa7" visible="true"/>
+			<style color="transparent" color2="#70dc84" visible="true"/>
+			<style color="transparent" color2="#333333" visible="true"/>
+			<style color="transparent" color2="#acd0ee" visible="true"/>
+			<style color="transparent" color2="#a21619" visible="true"/>
+			<style color="transparent" color2="#5d61ff" visible="true"/>
+			<style color="transparent" color2="#e4e4e4" visible="true"/>
+			<style color="transparent" color2="#248bac" visible="true"/>
+			<style color="transparent" color2="#b89bc9" visible="true"/>
+			<style color="transparent" color2="#666666" visible="true"/>
+			<style color="transparent" color2="#0d8d46" visible="true"/>
+		</cycle>
+	</setStyleCycle>
+</template>

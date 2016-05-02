@@ -96,7 +96,7 @@ ExportDataKMeans <- function(datafilename, K=NA) {
     data <- read.csv(datafilename,header=TRUE);
     data <- as.matrix(sapply(data,as.numeric));
     nrow = nrow(data);
-    print(nrow);
+    print(paste("The old row number is:",nrow));
     exportData <- data.frame(diff_ratio=double(),average_ratio=double(),stringsAsFactors=FALSE);
     j = 1;
     for(i in 1:nrow){
@@ -106,13 +106,13 @@ ExportDataKMeans <- function(datafilename, K=NA) {
         j = j + 1;
       }
     }
-    print(nrow(exportData));
+    print(paste("The old row number is:",nrow(exportData)));
     #print(exportData);
     if(!is.numeric(K))  #未知分类数，则逐一试探，画出曲线
     {
       # k取2到8，评估K
       K <- 2:8;
-      round <- 20 # 每次迭代30次，避免局部最优
+      round <- 20 # 每次迭代20次，避免局部最优
       rst <- sapply(K, function(i){
         print(paste("K = ",i))
         mean(sapply(1:round,function(r){
@@ -127,7 +127,9 @@ ExportDataKMeans <- function(datafilename, K=NA) {
     }
     else {#指定了分类数，则聚类后画图
       #进行多次聚类，选取Sum of Squared Error（SSE）最小的一个
-      clu_results <- sapply(1:5, function(r){
+      print(paste('K = ', K))
+
+      clu_results <- sapply(1:20, function(r){
         print(paste("round",r))
         result <- kmeans(exportData, K)
         stats <- cluster.stats(dist(exportData), result$cluster)
@@ -142,7 +144,9 @@ ExportDataKMeans <- function(datafilename, K=NA) {
       res <- data.frame(names(best_clu$cluster),best_clu$cluster);
       res <- as.matrix(sapply(res,as.numeric));
       res <- res[order(res[,1]),];
-      print(best_clu$centers);
+      print(best_clu);
+      print(paste('---------------------------------------------------'));
+      print(' ');
       return(res);
     }
 }
@@ -164,13 +168,16 @@ kmeans.findK <- function()
 
 kmeans.setK <- function()
 {
-  years <- c(1994-2000,2001-2007,2008-2014)
-  k_value <- c(8,8,4); #input the K from the kmeans.findK function
+  years <- c('1994-2000','2001-2007','2008-2014')
+  k_value <- c(8,6,5); #input the K from the kmeans.findK function
   k_index = 1;
+
+  sink("output.txt", append=FALSE, split=FALSE);
   for(y in years)
   {
     filename <- paste0("N01(",y,")-update.csv")
     
+    print(paste0("Open the file N01(",y,")-update.csv"));
     #K-means
     res <- ExportDataKMeans(filename, k_value[k_index])
     #save png
@@ -182,4 +189,6 @@ kmeans.setK <- function()
 
     k_index = k_index + 1;
   }
+
+  sink();
 }

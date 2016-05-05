@@ -142,8 +142,8 @@ ExportDataKMeans <- function(datafilename, K=NA) {
       
       #按分类排序
       res <- data.frame(names(best_clu$cluster),best_clu$cluster);
-      res <- as.matrix(sapply(res,as.numeric));
-      res <- res[order(res[,1]),];
+      #res <- as.matrix(sapply(res,as.numeric));
+      #res <- res[order(res[,1]),];
       print(best_clu);
       print(paste('---------------------------------------------------'));
       print(' ');
